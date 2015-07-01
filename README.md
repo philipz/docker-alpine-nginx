@@ -1,26 +1,17 @@
 # Alpine Nginx
 
-Tiny web server using nginx built from source on Alpine Linux.
-
-The current version of Nginx availble in apk is 1.6.2:
+The current version of Nginx availble in apk is 1.8.0:
 
 ```sh
 / # apk --update search nginx
-nginx-1.6.2-r1
+nginx-1.8.0-r1
 ```
 
-This image builds the latest version (1.7.11) from source:
-
-```sh
-docker run -it --rm connexiolabs/alpine-nginx:1.7.11 sh
-
-> nginx -v
-nginx version: nginx/1.7.11
+## How to use
+Don't forget to change your name.
+```
+docker build .
+./start.sh
 ```
 
-Built image currently weighs in at 28.1 MB:
-
-```sh
-❯ docker images | grep connexiolabs/alpine-nginx
-connexiolabs/alpine-nginx:latest  4cbcc8520cc0  2 minutes ago  28.1 MB
-```
+This image currently size is 6.727 MB:
